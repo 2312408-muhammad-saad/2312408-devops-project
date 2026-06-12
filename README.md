@@ -36,6 +36,17 @@ When code is pushed to GitHub:
 6. On push to `main`, the Docker image is built and pushed to Docker Hub.
 7. The deployment job SSHs into EC2 and restarts the live container.
 
+## How to Run Locally
+
+Build the images and start both containers with a single command:
+
+```bash
+docker compose up --build
+```
+
+The API is then available at `http://localhost:8000` and the interactive docs at
+`http://localhost:8000/docs`.
+
 ## Application Architecture
 
 Browser or FastAPI Docs  
