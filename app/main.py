@@ -49,6 +49,7 @@ def root():
 
 @app.get("/health")
 def health(db: Session = Depends(get_db)):
+    """Returns service health status and DB connection state."""
     try:
         db.execute(text("SELECT 1"))
         db_status = "connected"
