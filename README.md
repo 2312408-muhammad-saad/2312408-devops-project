@@ -13,6 +13,13 @@ Git Author Email for this project: 2312408.muhammadsaad+2312408@gmail.com
 Containerised FastAPI Microservice with PostgreSQL, Docker Compose,
 GitHub Actions CI/CD, and AWS EC2 deployment.
 
+## Architecture
+
+The system runs two Docker containers orchestrated by Docker Compose: a FastAPI +
+Uvicorn web service on port 8000 and a PostgreSQL 15 database on port 5432.
+The web service stores student records in PostgreSQL through a named volume, so the
+data persists across container restarts and redeployments.
+
 ## What This Project Does
 
 This project runs a FastAPI web service and a PostgreSQL database in
