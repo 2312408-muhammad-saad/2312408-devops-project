@@ -30,6 +30,7 @@ jobs:
     needs: build-push
 
     steps:
+      # SSH into EC2 and pull latest image, restart containers
       - name: Deploy to EC2
         uses: appleboy/ssh-action@v1
         with:
