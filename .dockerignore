@@ -8,3 +8,5 @@ __pycache__/
 myenv/
 test_students.db
 README-draft.txt
+*.log
+*.md
