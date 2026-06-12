@@ -60,6 +60,15 @@ Services:
 - `db`: PostgreSQL 15 database
 - `postgres_data`: named volume for database persistence
 
+## API Endpoints Reference
+
+| Method | Endpoint            | Description                                  |
+| ------ | ------------------- | -------------------------------------------- |
+| GET    | `/health`           | Returns service status and DB connection     |
+| POST   | `/students`         | Creates a new student record                 |
+| GET    | `/students`         | Returns all student records                  |
+| GET    | `/students/{reg_no}`| Returns a single student by registration no. |
+
 ## API Endpoints
 
 ### GET `/health`
