@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(git checkout -b feature/cicd-pipeline)",
+      "PowerShell(git add .github/workflows/ci.yml)",
+      "PowerShell(git add .github/workflows/cd.yml)",
+      "PowerShell(git push -u origin feature/cicd-pipeline)"
+    ]
+  }
+}
