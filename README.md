@@ -309,6 +309,13 @@ It has three jobs:
 
 The deployment job runs only after tests pass and only on push to `main`.
 
+## EC2 Deployment
+
+On every push to `main`, the CD pipeline builds the Docker image, pushes it to
+Docker Hub, then SSHs into the EC2 instance to pull the latest image and restart
+the `myapp` and `devops-db` containers on the shared `app-network`. The app is
+served on port 8000 of the EC2 public IP.
+
 ## EC2 Verification
 
 After deployment, open:
